@@ -1,5 +1,5 @@
 window.onload = async function() {
-  await fetch("https://meilyn22.github.io/WDD330_Portfolio/index/json/dynamic-table-of-contents.json")
+  await fetch("https://meilyn22.github.io/WDD330_Portfolio_file_1/index/json/dynamic-table-of-contents.json")
     .then(response => response.json())
     .then(function(json) {
       for (let i in json.dynamicTableOfContents) {
