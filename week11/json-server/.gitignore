@@ -1,0 +1,6 @@
+# ignore all logs
+*.log
+# ignore all node_modules
+node_modules
+# ignore all database files
+database.json

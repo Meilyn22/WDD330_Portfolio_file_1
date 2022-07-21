@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notes for week 1 reading">
+  <link rel="stylesheet" href="../index/css/normalize.css">
+  <link rel="stylesheet" href="../index/css/small.css">
+  <link rel="stylesheet" href="../index/css/medium.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <title>Week 2 Notes</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Matthew B. Christensen
+    </h1>
+  </header>
+  <h2>
+    WDD 330: Week 2 Notes
+  </h2>
+  <hr>
+  <h3>
+    Programming basics that EVERYONE ought to know by now
+  </h3>
+  <h4>Chapter 2 of Novice To Ninja</h4>
+  <p>Comments: single line comments are made by using the double slash '// '. Multi-line comments are made by using a combination of '/*' and '*/'. </p>
+  <p>Grammar: obviously use a ';' at the end of each line of code, separate each line of code onto its own line. A block is a series of statements that are inside of to curly brackets, '{ }'.</p>
+  <p>Primitive Data Types: String, Symbol, Number, Boolean, Undefined, and Null. Everything else is considered an object and follows the object rules. </p>
+  <p>Variable Assignment: <b>IMPORTANT!</b> "var" is no longer used. "Let" and "const" are the only currently acceptable ways of assigning variables. "Var" still exists, but it only exists so that programs can still be backwards compatible.</p>
+  <p>Assignment by reference: For any primitive data types, values of variables are assigned directly. For object types however, they are assigned by reference. This means that if I make a variable equal to another variable, this only makes a copy. Now if I change one variable I am changing both. There are a few ways around this, but it is something that developers must be aware of as this is odd behavior seen in Javascript that is not seen in other languages.</p>
+  <p>Important String Methods: charAt- important as it gives the character at a given index. indexOf: Gives the index of the first found instance of a character. </p>
+  <p>Symbols: From what I can glean from other reading, the symbol type creates a UUID for a description. It seems that the reason for creating this type is that it would enable private properties to be created in JavaScript. However, symbols do not achieve property privacy. there is a class method that can be called that will return an array of property synmbols. But it can be used to make properties more private. </p>
+  <h4>Chapter 3 of Novice To Ninja</h4>
+  <p>Arrays: can be new'd (new Array()), or can be made by 'let array = []'. Can initialize values by then doing 'array[0] = value'. Arrays do NOT need to have same types in them. They are simply containers that can hold a piece of data type at each of its indexes. You can remove values from arrays with 'delete array[index]'. </p>
+  <p>Destructuring Arrays: You can destructure an array by taking values out of an array an representing them as individual values. So if an array had 5 values in it you could destructure it with a statement such as 'const[a, b, c, d, e] = array'. This can also be used to swap the values of an array=> [x, y] = [y, x];.</p>
+  <p>Important Array functions: array.pop() returns the final item from the array and deletes the item from the array. array.shift() works similarly with the first item in the array. list.push(item) pushes an item onto the end of an array while list.unshift(item) allows you to push an item onto the front of an array. Another important function is the spread operator represented by three dots, '...array'. It lists out each item without the brackets around them. This can be used to concatnate arrays (and many other things) by doing this=> 'let array = [...array1, ...array2]'. Operators like join take each of the elements and appends them together into a string. </p>
+  <p>Sets: Sets are used to create a unique set of data. New empty sets are created with by being 'newed' 'constant list = new Set();'. You can make an array unique by placing it into the 'newed' set operator. Sets also do NOT have index notation for inspecting individual entries.  </p>
+  <p>WeakSets: <b>IMPORTANT!</b> Creating an Set of objects can be bad, because when the original object is deleted it will still exist in the array. So when you want to do a Set of objects you should do a 'WeakSet' as it will garbage collect any references to 'dead objects'. Only problem with WeakSets is that only object type items can be placed in them. </p>
+  <p>Maps: maps create key value pairs similar to hashes or dictionaries. Maps can use any data type as a key. You can easily find the number of key value pairs there are by using the 'size' property. WeakMaps work the same way as WeakSets.</p>
+  <p>Loop Tricks: You can loop over arrays with a 'for of' loop. The same can be done with sets. To loop through maps you need to do a 'for of map.keys()' loop. You can also do this with values or simply 'entries'. </p>
+  <h4>Chapter 4 of Novice To Ninja</h4>
+  <p>Isn't much to say about this, main thing to note, there is more than 1 way to make a function in js. The first way is by creating an anonymous function by using the syntax, "function() {}". You can also assign these functions to a variable by doing 'let functionName = function() {}'. The next way to make a function is to do an arrow function like, (x, y) => x + y. You can assign names to these as well. 
+  <p>Function Hoisting: Function hoisting makes it so that the functions and variables are all hoisted to the top of the current scope and can be invoded before they have been defined. </p>
+  <p>Map, Reduce, and Filter are all functions that iterate over the entire array for a purpose.</p>
+  </p>
+  <footer>
+    &copy;2022 | Matthew B. Christensen | Utah
+    <div id="last-updated"></div>
+  </footer>
+  <script src="../index/js/last-updated.js"></script>
+</body>
+</html>
